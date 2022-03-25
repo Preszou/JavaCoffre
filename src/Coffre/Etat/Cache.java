@@ -2,18 +2,19 @@ package Coffre.Etat;
 
 import Coffre.Coffre;
 
-public class Caché extends SuperEtat {
+public class Cache extends SuperEtat {
 
     @Override
     public void oterLivre(Coffre coffre)
     {
-        coffre.setEtat(new Fermé());
+        coffre.setEtat(new Ferme());
     }
 
     @Override
     public String nomEtat(Coffre coffre) {
         return "CacheParBibliotheque";
     }
+
 
 
 }

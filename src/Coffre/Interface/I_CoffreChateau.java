@@ -1,4 +1,4 @@
-package Coffre;
+package Coffre.Interface;
 
 public interface I_CoffreChateau {
 

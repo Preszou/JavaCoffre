@@ -6,7 +6,7 @@ public class Visible extends SuperEtat{
 
     @Override
     public void tournerChandelleVersGauche(Coffre coffre) {
-        coffre.setEtat(new Bloqué());
+        coffre.setEtat(new Bloque());
         coffre.setLapinLibere(true);
     }
 
@@ -18,11 +18,10 @@ public class Visible extends SuperEtat{
 
     @Override
     public void remettreLivre(Coffre coffre){
-        coffre.setEtat(new Caché());
         coffre.setChienLibere(false);
+        coffre.setEtat(new Cache());
+
     }
-
-
 
 
 

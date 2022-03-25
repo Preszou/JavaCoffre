@@ -2,10 +2,8 @@ package Coffre;
 
 import static org.junit.Assert.*;
 
-import Coffre.Coffre;
-import Coffre.I_CoffreChateau;
+import Coffre.Interface.I_CoffreChateau;
 import org.junit.After;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 

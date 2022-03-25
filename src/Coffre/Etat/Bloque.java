@@ -2,9 +2,9 @@ package Coffre.Etat;
 
 import Coffre.Coffre;
 
-public class Bloqué extends SuperEtat {
+public class Bloque extends SuperEtat {
 
-    public Bloqué()
+    public Bloque()
     {
 
     }
@@ -13,4 +13,6 @@ public class Bloqué extends SuperEtat {
     public String nomEtat(Coffre coffre) {
         return "Bloque";
     }
+
+
 }

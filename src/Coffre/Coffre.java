@@ -1,24 +1,45 @@
 package Coffre;
 
-import Coffre.Etat.Caché;
+import Coffre.Etat.Cache;
 import Coffre.Etat.SuperEtat;
+import Coffre.Interface.I_CoffreChateau;
+import Coffre.Interface.I_Observateur;
 
-public class Coffre implements I_CoffreChateau{
+import java.util.ArrayList;
+import java.util.List;
+
+public class Coffre implements I_CoffreChateau {
 
     private SuperEtat etat;
     private boolean lapinLibere;
     private boolean chienLibere;
+    private List<I_Observateur> test = new ArrayList<I_Observateur>();
 
     public Coffre()
     {
-        this.etat = new Caché();
+        this.etat = new Cache();
         this.lapinLibere = false;
         this.chienLibere = false;
     }
 
+    public void attache(I_Observateur o)
+    {
+        test.add(o);
+    }
+
+    private void avertir()
+    {
+        for(I_Observateur o : test)
+        {
+            o.miseAJour(this);
+        }
+    }
+
+
     public void setEtat(SuperEtat pEtat)
     {
         etat = pEtat;
+        this.avertir();
     }
 
     @Override

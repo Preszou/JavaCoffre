@@ -2,17 +2,18 @@ package Coffre.Etat;
 
 import Coffre.Coffre;
 
-public class Fermé extends Visible{
+public class Ferme extends Visible{
 
     @Override
     public void tournerChandelleVersDroite(Coffre coffre) {
-        coffre.setEtat(new PO());
         coffre.setChienLibere(true);
+
+        coffre.setEtat(new PO());
     }
 
     @Override
     public void tournerChandelleVersGauche(Coffre coffre){
-        coffre.setEtat(new Bloqué());
+        coffre.setEtat(new Bloque());
         coffre.setLapinLibere(true);
     }
 
